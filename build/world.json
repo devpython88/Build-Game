@@ -4,92 +4,127 @@
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 380.0,
+            "x": -140.0,
             "y": 280.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 380.0,
+            "x": -140.0,
             "y": 320.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 380.0,
+            "x": -140.0,
             "y": 360.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 380.0,
+            "x": -140.0,
             "y": 400.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 420.0,
+            "x": -140.0,
+            "y": 440.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": -100.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": -60.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": -20.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 20.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 60.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 100.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 140.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 180.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 220.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 260.0,
+            "y": 440.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 260.0,
             "y": 400.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 460.0,
-            "y": 400.0
-        },
-        {
-            "height": 40.0,
-            "texture": "assets/bricks.png",
-            "width": 40.0,
-            "x": 500.0,
-            "y": 400.0
-        },
-        {
-            "height": 40.0,
-            "texture": "assets/bricks.png",
-            "width": 40.0,
-            "x": 500.0,
+            "x": 260.0,
             "y": 360.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 500.0,
+            "x": 260.0,
             "y": 320.0
-        },
-        {
-            "height": 40.0,
-            "texture": "assets/bricks.png",
-            "width": 40.0,
-            "x": 500.0,
-            "y": 280.0
-        },
-        {
-            "height": 40.0,
-            "texture": "assets/bricks.png",
-            "width": 40.0,
-            "x": 460.0,
-            "y": 280.0
-        },
-        {
-            "height": 40.0,
-            "texture": "assets/bricks.png",
-            "width": 40.0,
-            "x": 340.0,
-            "y": 280.0
-        },
-        {
-            "height": 40.0,
-            "texture": "assets/bricks.png",
-            "width": 40.0,
-            "x": 300.0,
-            "y": 280.0
         },
         {
             "height": 40.0,
@@ -103,47 +138,89 @@
             "texture": "assets/bricks.png",
             "width": 40.0,
             "x": 220.0,
-            "y": 280.0
+            "y": 240.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 220.0,
-            "y": 320.0
+            "x": 180.0,
+            "y": 240.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 220.0,
-            "y": 360.0
+            "x": -100.0,
+            "y": 240.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
             "width": 40.0,
-            "x": 220.0,
-            "y": 400.0
+            "x": -60.0,
+            "y": 240.0
         },
         {
             "height": 40.0,
             "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 20.0,
+            "y": 240.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/bricks.png",
+            "width": 40.0,
+            "x": 100.0,
+            "y": 240.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/broken_stone.png",
+            "width": 40.0,
+            "x": -20.0,
+            "y": 240.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/broken_stone.png",
+            "width": 40.0,
+            "x": 140.0,
+            "y": 240.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/mossy_stone.png",
+            "width": 40.0,
+            "x": -140.0,
+            "y": 240.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/mossy_stone.png",
+            "width": 40.0,
+            "x": -140.0,
+            "y": 480.0
+        },
+        {
+            "height": 40.0,
+            "texture": "assets/mossy_stone.png",
             "width": 40.0,
             "x": 260.0,
-            "y": 400.0
+            "y": 480.0
         },
         {
             "height": 40.0,
-            "texture": "assets/bricks.png",
+            "texture": "assets/mossy_stone.png",
             "width": 40.0,
-            "x": 340.0,
-            "y": 400.0
+            "x": 260.0,
+            "y": 240.0
         }
     ],
     "player": {
         "current": "assets/bricks.png",
-        "x": 420.0,
-        "y": 440.0
+        "x": 60.0,
+        "y": 360.0
     }
 }

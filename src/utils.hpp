@@ -9,7 +9,7 @@ struct Block {
     Texture2D texture;
     std::string f_path;
 };
-
+ 
 Rectangle blockToRectangle(struct Block block);
 void changePositionWithCamera(struct Rectangle *rect, float x, float y, struct Camera2D *camera);
 bool checkCollisionBlocks(std::vector<Block> *blocks, float x, float y);
