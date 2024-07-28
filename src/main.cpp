@@ -1,15 +1,14 @@
-#include <raylib.h>
+﻿#include <raylib.h>
 #include <vector>
 #define RAYGUI_IMPLEMENTATION
 #include "raygui.h"
 #include "utils.hpp"
-#include <string>
 #include <sstream>
 #include <iostream>
-#include <qt5/QtWidgets/QApplication>
-#include <qt5/QtWidgets/QMessageBox>
-#include <qt5/QtWidgets/QFileDialog>
-#include <qt5/QtCore/QDir>
+#include <qt5/QtWidgets/Qapplication>
+#include <qt5/QtWidgets/QmessageBox>
+#include <qt5/QtWidgets/QfileDialog>
+#include <qt5/QtCore/Qdir>
 
 const float DEFAULT_SIZE = 40.0f;
 int SCREEN_WIDTH = 800;
@@ -17,13 +16,15 @@ int SCREEN_HEIGHT = 600;
 const int MOVEMENT = 40;
 std::string VERSION = "0.5.0";
 
-
 std::vector<Block> blocks;
 std::vector<std::string> textures = {
     "assets/bricks.png",
     "assets/broken_stone.png",
-    "assets/mossy_stone.png"};
+    "assets/mossy_stone.png",
+    "assets/door.png"};
 int currentTextureIndex = 0;
+
+void loadWorld(Texture2D &currentTexture, Camera2D &cam, Rectangle &player);
 
 std::vector<float> GetCenter(int width, int height)
 {
@@ -33,12 +34,19 @@ std::vector<float> GetCenter(int width, int height)
 
 void addBlock(float x, float y, Texture2D texture, std::string file_path)
 {
-    blocks.push_back({x, y, DEFAULT_SIZE, DEFAULT_SIZE, texture, file_path});
+    int t = 0;
+    std::cout << currentTextureIndex << std::endl;
+    if (currentTextureIndex == 3)
+    {
+        t = 1;
+    }
+    Block block(x, y, DEFAULT_SIZE, DEFAULT_SIZE, texture, file_path, t);
+    blocks.push_back(block);
 }
 
 void DrawBlocks()
 {
-    for (Block &block : blocks)
+    for (const auto &block : blocks)
     {
         DrawTexture(block.texture, block.x, block.y, WHITE);
     }
@@ -166,6 +174,78 @@ void Game(int argc, char *argv[])
             }
         }
 
+        if (IsKeyPressed(KEY_ENTER))
+        {
+            for (Block &b : blocks)
+            {
+                if (b.x == player.x + 40 &&
+                    b.blockType == 1)
+                {
+
+                    if (b.f_path == "assets/door.png")
+                    {
+                        b.f_path = "assets/door_opened.png";
+                        b.texture = LoadTexture(b.f_path.c_str());
+                        b.texture.height = DEFAULT_SIZE;
+                        b.texture.width = DEFAULT_SIZE;
+                    } else {
+                        b.f_path = "assets/door.png";
+                        b.texture = LoadTexture(b.f_path.c_str());
+                        b.texture.height = DEFAULT_SIZE;
+                        b.texture.width = DEFAULT_SIZE;
+                    }
+                }
+                else if (b.x == player.x - 40 &&
+                         b.blockType == 1)
+                {
+                    if (b.f_path == "assets/door.png")
+                    {
+                        b.f_path = "assets/door_opened.png";
+                        b.texture = LoadTexture(b.f_path.c_str());
+                        b.texture.height = DEFAULT_SIZE;
+                        b.texture.width = DEFAULT_SIZE;
+                    } else {
+                        b.f_path = "assets/door.png";
+                        b.texture = LoadTexture(b.f_path.c_str());
+                        b.texture.height = DEFAULT_SIZE;
+                        b.texture.width = DEFAULT_SIZE;
+                    }
+                }
+                else if (b.y == player.y + 40 &&
+                         b.blockType == 1)
+                {
+                    if (b.f_path == "assets/door.png")
+                    {
+                        b.f_path = "assets/door_opened.png";
+                        b.texture = LoadTexture(b.f_path.c_str());
+                        b.texture.height = DEFAULT_SIZE;
+                        b.texture.width = DEFAULT_SIZE;
+                    } else {
+                        b.f_path = "assets/door.png";
+                        b.texture = LoadTexture(b.f_path.c_str());
+                        b.texture.height = DEFAULT_SIZE;
+                        b.texture.width = DEFAULT_SIZE;
+                    }
+                }
+                else if (b.y == player.y - 40 &&
+                         b.blockType == 1)
+                {
+                    if (b.f_path == "assets/door.png")
+                    {
+                        b.f_path = "assets/door_opened.png";
+                        b.texture = LoadTexture(b.f_path.c_str());
+                        b.texture.height = DEFAULT_SIZE;
+                        b.texture.width = DEFAULT_SIZE;
+                    } else {
+                        b.f_path = "assets/door.png";
+                        b.texture = LoadTexture(b.f_path.c_str());
+                        b.texture.height = DEFAULT_SIZE;
+                        b.texture.width = DEFAULT_SIZE;
+                    } 
+                }
+            }
+        }
+
         // Block adding logic
         if (IsKeyPressed(KEY_RIGHT_SHIFT))
         {
@@ -202,14 +282,7 @@ void Game(int argc, char *argv[])
 
         if (GuiButton((Rectangle){0, static_cast<float>(SCREEN_HEIGHT) - 150, 120, 50}, "Load..."))
         {
-            QFileDialog dialog;
-
-            QString file = dialog.getOpenFileName();
-
-            if (file != NULL)
-            {
-                load(file.toStdString(), &blocks, &player, &currentTexture, &cam);
-            }
+            loadWorld(currentTexture, cam, player);
         }
 
         std::string text = "Current Block: " + split(split(textures.at(currentTextureIndex), '/').at(1), '.').at(0);
@@ -235,6 +308,18 @@ void Game(int argc, char *argv[])
     CloseWindow();
 }
 
+void loadWorld(Texture2D &currentTexture, Camera2D &cam, Rectangle &player)
+{
+    QFileDialog dialog;
+
+    QString file = dialog.getOpenFileName();
+
+    if (file != NULL)
+    {
+        load(file.toStdString(), &blocks, &player, &currentTexture, &cam);
+    }
+}
+
 /***************************************************/
 
 int TitleScreen(int argc, char *argv[])
@@ -257,6 +342,7 @@ int TitleScreen(int argc, char *argv[])
             code = 1;
             break;
         }
+
         EndDrawing();
     }
 
