@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/build_game.dir/src/main.cpp.o CMakeFiles/build_game.dir/src/utils.cpp.o -o build_game  -lraylib -lGL -lm -lpthread -lrt -ldl -lX11 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.8 
