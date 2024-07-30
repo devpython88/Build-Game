@@ -2,8 +2,8 @@
 Simple 2D Lightweight sandbox game. Open-Source
 
 <ul>
-  <li>Ram: 24 MB</li>
-  <li>Cpu: Single-core 92 mHz</li>
+  <li>Ram: 112 MB</li>
+  <li>Cpu: Single-core 132 mHz</li>
   <li>GPU: Radeon HD 6480G or any GT gpu</li>
   <li>Storage: HDD; 20 MB</li>
 </ul>
